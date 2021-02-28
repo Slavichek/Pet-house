@@ -1,0 +1,158 @@
+@import "mixins", "variables";
+* {
+    box-sizing: border-box;
+}
+img {
+    display: block;
+    width: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.flex {
+    @include display-flex;
+}
+
+.flex-column {
+    @include display-flex;
+    @include flex-direction(column);
+}
+
+.flex-align-center {
+    @include align-items(center);
+}
+.flex-row-center {
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.flex-start {
+    justify-content: flex-start;
+}
+
+.flex-between {
+    justify-content: space-between;
+}
+.flex-bottom {
+    margin-top: auto;
+}
+
+.flex-wrap {
+    @include flex-wrap(wrap);
+}
+
+.center {
+    text-align: center;
+}
+.left {
+    text-align: left;
+}
+.right {
+    text-align: right;
+}
+
+.btn {
+    @include button-variant-plain(
+        $color-brown-text,
+        transparent,
+        $color-accent
+    );
+    border: 2px solid transparent;
+    outline: none;
+    display: inline-block;
+    transition: 0.35s ease;
+    position: relative;
+    padding: 1.1em 2.7em;
+    min-width: 205px;
+    border-radius: 4em;
+    font-size: 1.063em;
+    font-family: Georgia;
+    &.btn {
+        &--white {
+            background: $color-white;
+            border-color: $color-accent;
+
+            &:hover {
+                background: $color-accent;
+            }
+        }
+    }
+}
+.relative {
+    position: relative;
+}
+.sz-12 {
+    font-size: 0.75em;
+}
+.sz-13 {
+    font-size: 0.813em;
+}
+.sz-15 {
+    font-size: 0.938em;
+}
+.sz-17 {
+    font-size: 1.063em;
+}
+.sz-20 {
+    font-size: 1.25em;
+}
+
+.txt {
+    &-white {
+        color: $color-white;
+    }
+    &-grey {
+        color: $color-grey-text;
+    }
+    &-d-grey {
+        color: $color-dark-grey-text;
+    }
+    &-sd-grey {
+        color: $color-super-dark-grey-text;
+    }
+}
+.ff {
+    &-arial {
+        font-family: Arial;
+    }
+}
+.mb {
+    &-25 {
+        margin-bottom: 1.563rem;
+    }
+    &-30 {
+        margin-bottom: 1.875rem;
+    }
+    &-40 {
+        margin-bottom: 2.5rem;
+    }
+    &-45 {
+        margin-bottom: 2.813rem;
+    }
+    &-65 {
+        margin-bottom: 4.063rem;
+    }
+}
+.mt {
+    &-25 {
+        margin-top: 1.563rem;
+    }
+    &-30 {
+        margin-top: 1.875rem;
+    }
+    &-40 {
+        margin-top: 2.5rem;
+    }
+    &-45 {
+        margin-top: 2.813rem;
+    }
+    &-65 {
+        margin-top: 4.063rem;
+    }
+}

@@ -1,0 +1,165 @@
+@media (max-width: 1500px) {
+    body {
+        font-size: 95%;
+    }
+    .section {
+        &-fluid {
+            &--puppy {
+                background: url(../img/bg/footer.jpg) no-repeat 70% bottom;
+            }
+            &--main {
+                background: url(../img/bg/main_dog.jpg) no-repeat 60% bottom;
+            }
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    body {
+        font-size: 90%;
+    }
+    .slider {
+        .btn {
+            padding: 0.8em 1.2em;
+            min-width: 140px;
+        }
+    }
+}
+@media (max-width: 992px) {
+    body {
+        font-size: 85%;
+    }
+
+    .menu {
+        &-btn {
+            display: block;
+        }
+    }
+    .flex {
+        &-sm {
+            &--column {
+                @include flex-direction(column);
+            }
+        }
+    }
+    .navigation {
+        position: absolute;
+        width: 200px;
+        right: 0;
+        top: -500px;
+        transition: top 0.45s ease;
+        padding: 1em;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 1em;
+        &__item {
+            margin-bottom: 1em;
+            transition: scale 0.25s ease;
+            &:after {
+                display: none;
+            }
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+    .menu {
+        &-btn {
+            &.open ~ .navigation {
+                top: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .section {
+        &-fluid {
+            &--puppy,
+            &--main {
+                background: $color-black;
+                padding: 2em 3em;
+            }
+        }
+    }
+    .block {
+        &--40 {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .slider {
+        .owl-carousel .owl-nav button.owl {
+            &-next {
+                right: -40px;
+            }
+            &-prev {
+                left: -40px;
+            }
+        }
+    }
+    .flex {
+        &-xs {
+            &-column {
+                @include flex-direction(column);
+            }
+        }
+    }
+    .donate {
+        &__img {
+            &-block {
+                width: 100%;
+            }
+        }
+        &__form {
+            &-block {
+                margin-top: 2em;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+    .help {
+        &__item {
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 561px) {
+    .form {
+        width: 100%;
+        &__input {
+            width: 100%;
+        }
+    }
+
+    .block {
+        &--contact {
+            margin-right: 0;
+            text-align: center;
+        }
+        &--location {
+            margin-top: 2em;
+            text-align: center;
+        }
+        &--50 {
+            width: 100%;
+        }
+        &--about {
+            &__img {
+                margin-bottom: 2em;
+            }
+        }
+    }
+    .contact {
+        &__link {
+            padding-left: 0;
+            &.contact__link--location {
+                padding-left: 0;
+            }
+            &:before {
+                display: none;
+            }
+        }
+    }
+}
